@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: background-color 0.3s;
+}
+
+/* Toggle */
+.toggle-btn {
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* DARK THEME */
+body.dark {
+  background-color: #0f0f1c;
+}
+body.dark .calculator {
+  background: linear-gradient(145deg, #121220, #0d0d1a);
+  box-shadow: 0 0 30px rgba(0, 128, 255, 0.15);
+}
+body.dark .display {
+  color: white;
+}
+body.dark .expression {
+  color: #aaa;
+}
+body.dark .btn.gray {
+  background-color: #1f1f2e;
+  color: white;
+}
+body.dark .btn.blue {
+  background-color: #007bff;
+  color: white;
+}
+
+/* LIGHT THEME */
+body.light {
+  background-color: #f2f5fa;
+}
+body.light .calculator {
+  background: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+body.light .display {
+  color: #000;
+}
+body.light .expression {
+  color: #555;
+}
+body.light .btn.gray {
+  background-color: #f0f0f0;
+  color: #000;
+}
+body.light .btn.blue {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Calculator container */
+.calculator {
+  width: 90%;
+  max-width: 375px;
+  border-radius: 20px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Display */
+.display {
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  text-align: right;
+  word-wrap: break-word;
+}
+.expression {
+  font-size: 1rem;
+}
+.result {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+/* Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+.btn {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.wide2 {
+  grid-column: span 2;
+}
+
+/* Extra height for + and = */
+.tall {
+  grid-row: span 2;
+  align-self: stretch;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+
+.buttons {
+  gap: 12px; /* reduce this to make all buttons tighter */
+}
+
+.btn {
+  height: 100%;
+}
+
+.result.empty {
+  color: #888; /* light gray or muted */
+}
